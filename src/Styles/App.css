@@ -1,0 +1,29 @@
+.navBar{
+  text-align: center;
+}
+header{
+  background-color: #D4af37; 
+  
+}
+
+.AppBody{
+  background-color:#ad974f;
+  height: 100%; 
+}
+
+html{
+  background-color: #ffff;
+}
+
+.MainForm{
+ background-color: #e7e7e7;
+ height: fit-content;
+ width: 350px;
+ margin: 50px;
+ text-align: center;
+ border-width:5px;  
+    border-style:solid;
+
+ 
+
+}
