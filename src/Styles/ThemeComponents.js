@@ -9,10 +9,11 @@ export const buttonTheme = createMuiTheme({
   overrides: {
     MuiButton: {
       root:{
-        margin: '15px',
+        margin: '15px 50px',
         padding: '10px',
-        color: '#fffff'
-        }
+        color: '#fffff',
+       
+      },
     },
   }
 });
@@ -27,13 +28,18 @@ export const formThemesNewG = createMuiTheme({
         },
         MuiSelect:{
             root:{
-                margin: '20px auto 10px auto'
+                margin: '0px'
             }
         },
 
         MuiFormGroup:{
           root:{
             display: 'inline-block'
+          }
+        },
+        MuiInputLabel:{
+          root:{
+            display: 'flex'
           }
         }
     }

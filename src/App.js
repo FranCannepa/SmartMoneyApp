@@ -14,7 +14,7 @@ function App() {
   return (
     
       <Router>
-        <header>
+       <header>
           <ThemeProvider theme={buttonTheme}>
           <Link to="/NuevoGasto">
             <Button variant="contained" color="primary">
@@ -60,23 +60,8 @@ function App() {
       
   );
 }
-
 export default App;
 
 
 
 
-{/* <Button variant="contained" color="primary">
-              Nuevo Gasto
-              <Link to="/NuevoGasto" />
-          </Button>
-       
-          <Button variant="contained" color="primary">
-              REGISTRO
-              <Link to="/Registro"/>
-          </Button>
-        
-          <Button variant="contained" color="primary">
-            HOME
-         <Link to="/"/>
-        </Button> */}
