@@ -1,3 +1,4 @@
+import { Select } from '@material-ui/core';
 import { createMuiTheme } from '@material-ui/core/styles';
 
 export const buttonTheme = createMuiTheme({
@@ -22,14 +23,19 @@ export const formThemesNewG = createMuiTheme({
     overrides:{
         MuiTextField:{
             root:{
-                margin: '20px auto 10px auto'
+                margin: '20px auto 10px auto',
+                textAlign: 'left'
                 
             }
         },
         MuiSelect:{
             root:{
-                margin: '0px'
+              margin: '20px auto 10px auto'
+            },
+            select:{
+              textAlign: 'left' 
             }
+
         },
 
         MuiFormGroup:{
@@ -37,11 +43,7 @@ export const formThemesNewG = createMuiTheme({
             display: 'inline-block'
           }
         },
-        MuiInputLabel:{
-          root:{
-            display: 'flex'
-          }
-        }
+
     }
 });
 

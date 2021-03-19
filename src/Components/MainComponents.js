@@ -35,7 +35,7 @@ export class NewGasto extends Component {
               <FormControlLabel value="us" control={<Radio />} label="Dolares" />
             </RadioGroup>
 
-            <Button variant="contained" color="primary" onClick="history.go(0)" VALUE="Refresh">
+            <Button variant="contained" color="primary">
               INGRESAR
                 </Button>
 
