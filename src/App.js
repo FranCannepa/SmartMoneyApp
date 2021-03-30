@@ -1,5 +1,5 @@
 import './Styles/App.css';
-/* import {Button, ThemeProvider} from '@material-ui/core';
+import {Button, ThemeProvider} from '@material-ui/core';
 import {buttonTheme} from "./Styles/ThemeComponents";
 import {
   BrowserRouter as Router, 
@@ -7,22 +7,16 @@ import {
   Route, 
   Link
 } from "react-router-dom";
-import {Home, Registro} from './Components/MainComponents.js'; */
-import NewGasto from "./NuevoGasto"
+
+import NewGasto from "./Components/NuevoGasto"
+import ListGasto from "./Components/RegistroGasto"
 import { Fragment } from 'react';
 
 
 function App() {
   return (
     <Fragment>
-      <NewGasto />
-    </Fragment>
-  )
-}
-export default App;
-
-
-{/* <Router>
+      <Router>
        <header>
           <ThemeProvider theme={buttonTheme}>
           <Link to="/NuevoGasto">
@@ -52,17 +46,25 @@ export default App;
        </Route>
        
        <Route path="/Registro">
-         <Registro />
+         <ListGasto />
        </Route>
 
        <Route path="/">
-         <Home />
+         {/* <Home /> */}
        </Route>
 
 
        
      </Switch>
-     </Router> */}
+     </Router>
+      
+    </Fragment>
+  )
+}
+export default App;
+
+
+
 
 
 

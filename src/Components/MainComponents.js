@@ -93,25 +93,6 @@ export class Registro extends Component {
   }
 }
 
-export class Home extends Component {
-  render() {
-    return (
-      <div className="MainForm">
-        <ThemeProvider theme={formThemesNewG}>
 
-          <FormControl>
-            <TextField></TextField>
-            <TextField></TextField>
-            <Select></Select>
-            <RadioGroup>
-              <Radio></Radio>
-              <Radio></Radio>
-            </RadioGroup>
-          </FormControl>
-        </ThemeProvider>
-      </div>
-    )
-  }
-}
 
 

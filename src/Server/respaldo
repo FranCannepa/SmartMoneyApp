@@ -1,0 +1,31 @@
+/* 
+const cors = require("cors"); */
+
+
+//middleware
+app.use(express.json());
+
+//routes
+
+//NUEVO GASTO
+app.post("/NuevoGasto", async (req,res) => {
+    try {
+        const {valor,infog,tipog,tipom} = req.body;
+        /* console.log(req.body); */
+        const NewG = await pool.query(
+            "INSERT INTO gastos (valor, infog, tipog, tipom) VALUES($1, $2, $3, $4)",
+            [valor, infog, tipog, tipom]);
+        res.json(NewG.rows);
+        console.log(NewG.rows);
+
+    } catch (err) {
+        res.status(500).json(err)
+    }
+});
+
+
+//RUTAS
+const port = process.env.PORT;
+app.listen(port, () => {
+    console.log(`Server UP!, listening to port ${port}`);
+});
