@@ -4,7 +4,7 @@ const ListGasto = () => {
     const onSubmitForm = async e =>{
       e.preventDefault();
       try {
-        const response = fetch('http://localhost:4000/Registro', {
+        const response = await fetch('http://localhost:4000/registro', {
           method: "GET",
           headers: { "Content-Type": "application/json"},
           

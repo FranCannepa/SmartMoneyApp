@@ -19,13 +19,13 @@ function App() {
       <Router>
        <header>
           <ThemeProvider theme={buttonTheme}>
-          <Link to="/NuevoGasto">
+          <Link to="/nuevogasto">
             <Button variant="contained" color="primary">
               Nuevo Gasto
             </Button>
           </Link>
           
-          <Link to="/Registro">
+          <Link to="/registro">
             <Button variant="contained" color="primary">
               Registro
             </Button>
@@ -41,11 +41,11 @@ function App() {
       
       
       <Switch>
-       <Route path="/NuevoGasto">
+       <Route path="/nuevogasto">
          <NewGasto />
        </Route>
        
-       <Route path="/Registro">
+       <Route path="/registro">
          <ListGasto />
        </Route>
 
