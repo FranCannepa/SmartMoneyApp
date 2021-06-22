@@ -28,6 +28,8 @@ const NewGasto = () => {
     }
   }
 
+  
+
   return (
     <Fragment>
       <div className="MainForm">
@@ -37,11 +39,11 @@ const NewGasto = () => {
             <ThemeProvider theme={formThemesNewG, buttonTheme}>
               <InputLabel id="demo-simple-select-label">Tipo de Gastos</InputLabel>
               <Select labelId="tgastos" value={tipog} onChange={e => settipog(e.target.value)}>
-                <MenuItem value={10}>Ropa</MenuItem>
-                <MenuItem value={20}>Comida</MenuItem>
-                <MenuItem value={30}>Salidas</MenuItem>
-                <MenuItem value={40}>Tecnologia</MenuItem>
-                <MenuItem value={50}>Salidas</MenuItem>
+                <MenuItem value={"Ropa"}>Ropa</MenuItem>
+                <MenuItem value={"Comida"}>Comida</MenuItem>
+                <MenuItem value={"Salidas"}>Salidas</MenuItem>
+                <MenuItem value={"Tecnologia"}>Tecnologia</MenuItem>
+                <MenuItem value={"Salidas"}>Salidas</MenuItem>
               </Select>
 
               <TextField id="gastoValor" label="Valor" value={valor} onChange={e => setvalor(e.target.value)}></TextField>
@@ -50,8 +52,8 @@ const NewGasto = () => {
 
 
               <RadioGroup aria-label="quiz" name="Moneda" value={tipom} onChange={e => settipom(e.target.value)} >
-                <FormControlLabel value="uru" control={<Radio />} label="Pesos" />
-                <FormControlLabel value="us" control={<Radio />} label="Dolares" />
+                <FormControlLabel value="Pesos" control={<Radio />} label="Pesos" />
+                <FormControlLabel value="Dolares" control={<Radio />} label="Dolares" />
               </RadioGroup>
 
               <Button variant="contained" color="primary" type="submit" onSubmit={onSubmitForm}>

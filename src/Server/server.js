@@ -21,7 +21,7 @@ app.post("/nuevogasto", async (req, res) => {
         const { valor, infog, tipog, tipom } = req.body;
         const NewG = await pool.query("INSERT INTO gastos (valor, infog, tipog, tipom, fechagasto) VALUES($1, $2, $3, $4, $5)", [valor, infog, tipog, tipom, today]);
         res.json(NewG.rows).status(200).end();
-        console.log(NewG.rows);
+        /* console.log(NewG.rows); */
 
     } catch (err) {
         console.error(err.message);
@@ -32,13 +32,11 @@ app.get("/registro", async (req, res) => {
     try {
         const ListG = await pool.query("SELECT * from public.gastos");
         res.json(ListG.rows);
-        console.log(ListG.rows);
+        /* console.log(ListG.rows); */
     } catch (err) {
         console.error(err.message);
     }
 });
-
-
 
 
 app.listen(PORT, function (err) {

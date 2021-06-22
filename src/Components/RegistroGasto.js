@@ -1,42 +1,67 @@
-import React, { Fragment } from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
+
 
 const ListGasto = () => {
-    const onSubmitForm = async e =>{
-      e.preventDefault();
-      try {
-        const response = await fetch('http://localhost:4000/registro', {
-          method: "GET",
-          headers: { "Content-Type": "application/json"},
-          
-         
-      });
-      console.log(response);
-      
-      } catch (err) {
-        console.error(err.message);
-      }
-    }
-      
-    return (
-      <Fragment>
-        <h1>NuevoGasto</h1>
-        
-          <form onSubmit={onSubmitForm}>
-          {/* <input type="number" placeholder="Valor" value={valor} onChange={e => setvalor(e.target.value)} />
-          <br></br>
-          <input type="text" placeholder="Tipo Gasto" value={tipog} onChange={e => settipog(e.target.value)} /> 
-         <br></br>
-         <input type="text" placeholder="Descripcion" value={infog} onChange={e => setinfog(e.target.value)} />
-         <br></br>
-         <input type="text" placeholder="Moneda" value={tipom} onChange={e => settipom(e.target.value)} />
-         <br></br>  */}
-          <button>SUBMIT</button>
-          </form>
-  
-      </Fragment>
-    )
-  }
-  
-  export default ListGasto;
 
-  
+  const [registros, setRegistros] = useState([]);
+
+  const Registro = async () => {
+    try {
+      const response = await fetch('http://localhost:4000/registro');
+
+      const jsonData = await response.json();
+      setRegistros(jsonData);
+
+    } catch (err) {
+      console.error(err.message);
+    }
+
+  }
+
+  useEffect(() => {
+    Registro();
+
+  }, [])
+  console.log(registros);
+
+  return (
+    <Fragment>
+      <div className="RegTable">
+        <table >
+          <tr>
+            <th>Tipo de gasto</th>
+            <th>Valor</th>
+            <th>Descripcion</th>
+            <th>Moneda</th>
+            <th>Fecha</th>
+          </tr>
+
+          {registros.map(showReg => (
+            <tr>
+              <td>
+                {showReg.tipog}
+              </td>
+              <td>
+                {showReg.valor}
+              </td>
+              <td>
+                {showReg.infog}
+              </td>
+              <td>
+                {showReg.tipom}
+              </td>
+              <td>
+                {showReg.fechagasto}
+              </td>
+            </tr>
+          ))}
+
+        </table>
+      </div>
+
+    </Fragment >
+  )
+}
+
+export default ListGasto;
+
