@@ -19,6 +19,7 @@ function App() {
     <Fragment>
       <Router>
         <header>
+          <p>pito</p>
           <ThemeProvider theme={buttonTheme}>
             <Link to="/nuevogasto">
               <Button variant="contained" color="primary">
